@@ -1,7 +1,7 @@
-# What-s-Docker
+# What-is-Docker
 Simple tutorial for the docker beginner.
 
-# Basic knowledges
+# Basic Knowledges About Operating Systems
 
 ## First of all let we look at the image:
 
@@ -11,11 +11,20 @@ Simple tutorial for the docker beginner.
 
 <img src="https://arkit.co.in/wp-content/uploads/2016/07/Linux-boot-process.png" width="350" height="530"></img>
 
+## LVM
+In Linux, Logical Volume Manager (LVM) is a device mapper target that provides logical volume management for the Linux kernel. Most modern Linux distributions are LVM-aware to the point of being able to have their root file systems on a logical volume.
+
+(form Wiki)
+
+<img src="https://pic.pimg.tw/mistech/1376019734-2561621321_b.png" width="350" height="250" ></img>
+
 ## Hypervisor
 
 A hypervisor (or virtual machine monitor, VMM) is computer software, firmware or hardware that creates and runs virtual machines.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Hyperviseur.png" width="450" height="300"></img>
+(form Wiki)
+
+<img src="http://mistech.pixnet.net/album/photo/91367066-linux-lvm-%28logical-volume-manager%29-concept.png" width="450" height="300"></img>
 
 # About the Docker
 Docker is a set of platform as a service (PaaS) products that uses OS-level virtualization to deliver software in packages called containers.
@@ -51,16 +60,40 @@ But now, Docker support more isolated tools on below:
 
 # Architecture
 ```
+Docker Engine:
 ┌─Docker Host
-│ └─Docker Engine API(SDK)
+│ └─Docker Engine API(SDK) -- Docker registries(Docker Hub)
 │   └─Docker Daemon
 └─Docker Client
 ```
 As the docker deamon running in the systemD, then the Docker client can be used by us.
+
 <img src="https://www.netadmin.com.tw/upload/news/NP170703000317070311500702.png" width="550" height="250"></img>
-# Operating
-First of step:
+
+# Getting Started
+## install
 ``` shell
-systemctl start docker.service;
+$ sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine;
+                  
+$ sudo yum install -y yum-utils;
+
+$ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo;
+    
+$ sudo yum install docker-ce docker-ce-cli containerd.io;
+```
+## Run
+``` shell
+$ sudo systemctl enable --now docker.service;
+
+$ sudo sudo docker run hello-world
 ```
 
