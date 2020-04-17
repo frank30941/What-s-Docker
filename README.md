@@ -24,7 +24,7 @@ A hypervisor (or virtual machine monitor, VMM) is computer software, firmware or
 
 (form Wiki)
 
-<img src="http://mistech.pixnet.net/album/photo/91367066-linux-lvm-%28logical-volume-manager%29-concept.png" width="450" height="300"></img>
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Hyperviseur.png" width="450" height="300"></img>
 
 # About the Docker
 Docker is a set of platform as a service (PaaS) products that uses OS-level virtualization to deliver software in packages called containers.
