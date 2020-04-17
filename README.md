@@ -11,6 +11,13 @@ Simple tutorial for the docker beginner.
 
 <img src="https://arkit.co.in/wp-content/uploads/2016/07/Linux-boot-process.png" width="350" height="530"></img>
 
+## System D
+systemd is a software suite that provides an array of system components for Linux operating systems.
+
+Its main aim is to unify service configuration and behavior across Linux distributions; systemd's primary component is a "system and service manager"—an init system used to bootstrap user space and manage user processes. It also provides replacements for various daemons and utilities, including device management, login management, network connection management, and event logging.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Linux_kernel_unified_hierarchy_cgroups_and_systemd.svg/1024px-Linux_kernel_unified_hierarchy_cgroups_and_systemd.svg.png" width="650" height="450"></img>
+
 ## LVM
 In Linux, Logical Volume Manager (LVM) is a device mapper target that provides logical volume management for the Linux kernel. Most modern Linux distributions are LVM-aware to the point of being able to have their root file systems on a logical volume.
 
@@ -73,7 +80,8 @@ As the docker deamon running in the systemD, then the Docker client can be used 
 # Getting Started
 ## install
 ``` shell
-$ sudo yum remove docker \
+$
+sudo yum remove docker \
                   docker-client \
                   docker-client-latest \
                   docker-common \
@@ -82,18 +90,19 @@ $ sudo yum remove docker \
                   docker-logrotate \
                   docker-engine;
                   
-$ sudo yum install -y yum-utils;
+sudo yum install -y yum-utils;
 
-$ sudo yum-config-manager \
+sudo yum-config-manager \
     --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo;
     
-$ sudo yum install docker-ce docker-ce-cli containerd.io;
+sudo yum install docker-ce docker-ce-cli containerd.io;
 ```
 ## Run
 ``` shell
-$ sudo systemctl enable --now docker.service;
+$
+sudo systemctl enable --now docker.service;
 
-$ sudo sudo docker run hello-world
+sudo sudo docker run hello-world
 ```
 
