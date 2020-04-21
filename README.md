@@ -5,7 +5,7 @@ Simple tutorial for the docker beginner.
 
 ## Simple Operating System concept image:
 
-<img src="http://linux.vbird.org/linux_basic/0110whatislinux/os_01.gif" width="250" height="200"></img>
+<img src="https://i.imgur.com/4jqThpA.png" width="570" height="400"></img>
 
 ## Boot sequence 
 
@@ -27,7 +27,7 @@ Its main aim is to unify service configuration and behavior across Linux distrib
 
 ## cgroup
 
-cgroups (abbreviated from control groups) is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, etc.) of a collection of processes.
+cgroups (control groups) is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, etc.) of a collection of processes.
 
 ## Hypervisor
 
@@ -37,7 +37,7 @@ A hypervisor (or virtual machine monitor, VMM) is computer software, firmware or
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Hyperviseur.png" width="450" height="300"></img>
 
-# About the Docker
+# About Docker
 Docker is a set of platform as a service (PaaS) products that uses OS-level virtualization to deliver software in packages called containers.
 
 Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a single operating system kernel and therefore use fewer resources than virtual machines.
