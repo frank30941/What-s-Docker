@@ -3,13 +3,20 @@ Simple tutorial for the docker beginner.
 
 # Basic Knowledges About Operating Systems
 
-## First of all let we look at the image:
+## Simple Operating System concept image:
 
 <img src="http://linux.vbird.org/linux_basic/0110whatislinux/os_01.gif" width="250" height="200"></img>
 
 ## Boot sequence 
 
 <img src="https://arkit.co.in/wp-content/uploads/2016/07/Linux-boot-process.png" width="350" height="530"></img>
+
+## LVM
+In Linux, Logical Volume Manager (LVM) is a device mapper target that provides logical volume management for the Linux kernel. Most modern Linux distributions are LVM-aware to the point of being able to have their root file systems on a logical volume.
+
+(form Wiki)
+
+<img src="https://pic.pimg.tw/mistech/1376019734-2561621321_b.png" width="350" height="250" ></img>
 
 ## System D
 systemd is a software suite that provides an array of system components for Linux operating systems.
@@ -18,12 +25,9 @@ Its main aim is to unify service configuration and behavior across Linux distrib
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Linux_kernel_unified_hierarchy_cgroups_and_systemd.svg/1024px-Linux_kernel_unified_hierarchy_cgroups_and_systemd.svg.png" width="650" height="450"></img>
 
-## LVM
-In Linux, Logical Volume Manager (LVM) is a device mapper target that provides logical volume management for the Linux kernel. Most modern Linux distributions are LVM-aware to the point of being able to have their root file systems on a logical volume.
+## cgroup
 
-(form Wiki)
-
-<img src="https://pic.pimg.tw/mistech/1376019734-2561621321_b.png" width="350" height="250" ></img>
+cgroups (abbreviated from control groups) is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, etc.) of a collection of processes.
 
 ## Hypervisor
 
