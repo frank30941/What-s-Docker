@@ -2,6 +2,7 @@
 ## Getting start 
 
 ``` shell
+$
 docker network create net-mysql
 
 docker run --name simple-mysql \
