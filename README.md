@@ -18,6 +18,11 @@ In Linux, Logical Volume Manager (LVM) is a device mapper target that provides l
 
 <img src="https://pic.pimg.tw/mistech/1376019734-2561621321_b.png" width="350" height="250" ></img>
 
+``` shell
+#
+fdisk -l
+```
+
 ## System D
 systemd is a software suite that provides an array of system components for Linux operating systems.
 
@@ -28,6 +33,19 @@ Its main aim is to unify service configuration and behavior across Linux distrib
 ## cgroup
 
 cgroups (control groups) is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, etc.) of a collection of processes.
+
+``` shell
+#
+mount -t cgroup
+
+
+cd /sys/fs/cgroup/cpu
+mkdir testlimit
+ls testlimit/
+cat /sys/fs/cgroup/cpu/testlimit/cpu.cfs_quota_us
+cat /sys/fs/cgroup/cpu/testlimit/cpu.cfs_period_us
+echo 30000 > /sys/fs/cgroup/cpu/testlimit/cpu.cfs_quota_us // cpu usage 30%
+```
 
 ## Hypervisor
 
@@ -72,14 +90,18 @@ But now, Docker support more isolated tools on below:
 # Architecture
 ```
 Docker Engine:
-┌─Docker Host
-│ └─Docker Engine API(SDK) -- Docker registries(Docker Hub)
-│   └─Docker Daemon
+┌─Docker Daemon
+│ └─Docker Server(Host)
+│   └─Docker Engine API(SDK) -- Docker registries(Docker Hub)
 └─Docker Client
 ```
 As the docker deamon running in the systemD, then the Docker client can be used by us.
 
 <img src="https://www.netadmin.com.tw/upload/news/NP170703000317070311500702.png" width="550" height="250"></img>
+
+## UnionFS(aufs & devicemapper)
+
+
 
 # Getting Started
 ## install
