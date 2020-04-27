@@ -34,7 +34,7 @@ docker network rm net-mysql
 - -d : detach 背景執行
 
 ## docker-compose
-
+### Create a docker-compose.yml
 ``` yaml
 version: "2"
 services:
@@ -61,4 +61,9 @@ services:
 
 networks:
   net-mysql:
+```
+
+``` shell
+$
+docker-compose up
 ```
