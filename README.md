@@ -73,9 +73,14 @@ In general, VMs incur a lot of overhead beyond what is being consumed by your ap
 <img src="https://docs.docker.com/images/Container%402x.png" width="250" height="200"></img>
 <img src="https://docs.docker.com/images/VM%402x.png" width="250" height="200"></img>
 ## History
+### LXC
 Docker used LXC as its default execution environment.
 
 LXC(Linux Container) is a userspace interface for the Linux kernel containment features. Through a powerful API and simple tools, it lets Linux users easily create and manage system or application containers.
+
+### libcontainer
+### runC containerd
+
 
 But now, Docker support more isolated tools on below:
 - DOpenVZ
@@ -124,6 +129,12 @@ sudo yum-config-manager \
     
 sudo yum install docker-ce docker-ce-cli containerd.io;
 ```
+## take out sudo
+``` shell
+sudo groupadd docker;
+sudo usermod -aG docker $USER;
+```
+reboot or relogin;
 ## Run
 ``` shell
 $
