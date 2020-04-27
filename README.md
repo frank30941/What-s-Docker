@@ -13,6 +13,7 @@ Simple tutorial for the docker beginner.
 
 ## LVM
 In Linux, Logical Volume Manager (LVM) is a device mapper target that provides logical volume management for the Linux kernel. Most modern Linux distributions are LVM-aware to the point of being able to have their root file systems on a logical volume.
+在linux中LVM是kernel提供邏輯卷軸管理的功能,負責device mapper,大多數現代Linux發行版都支持LVM，可以將其根文件系統放在邏輯卷上。
 
 (form Wiki)
 
@@ -27,12 +28,17 @@ fdisk -l
 systemd is a software suite that provides an array of system components for Linux operating systems.
 
 Its main aim is to unify service configuration and behavior across Linux distributions; systemd's primary component is a "system and service manager"—an init system used to bootstrap user space and manage user processes. It also provides replacements for various daemons and utilities, including device management, login management, network connection management, and event logging.
+systemd是一個軟件套件，為Linux操作系統提供了一系列系統組件。它的主要目的是統一Linux發行版之間的服務配置和行為。
+
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Linux_kernel_unified_hierarchy_cgroups_and_systemd.svg/1024px-Linux_kernel_unified_hierarchy_cgroups_and_systemd.svg.png" width="650" height="450"></img>
+## namespace
+Namespaces are a feature of the Linux kernel that partitions kernel resources such that one set of processes sees one set of resources while another set of processes sees a different set of resources.
 
 ## cgroup
 
 cgroups (control groups) is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, etc.) of a collection of processes.
+cgroups（控制組）是Linux kernel的一項功能，可限制，計算比重和隔離進程集合的資源使用（CPU，記憶體，硬碟I / O，網路等）。
 
 ``` shell
 #
@@ -50,6 +56,7 @@ echo 30000 > /sys/fs/cgroup/cpu/testlimit/cpu.cfs_quota_us // cpu usage 30%
 ## Hypervisor
 
 A hypervisor (or virtual machine monitor, VMM) is computer software, firmware or hardware that creates and runs virtual machines.
+hypervisor 是用來建立與執行虛擬機器的軟體、韌體。
 
 (form Wiki)
 
@@ -142,4 +149,11 @@ sudo systemctl enable --now docker.service;
 
 sudo sudo docker run hello-world
 ```
+
+## Resource
+- [System D](https://en.wikipedia.org/wiki/Systemd)
+- [Cgroups](https://en.wikipedia.org/wiki/Cgroups)
+- [Linux_namespaces](https://en.wikipedia.org/wiki/Linux_namespaces)
+- [Hypervisor](https://en.wikipedia.org/wiki/Hypervisor)
+
 
