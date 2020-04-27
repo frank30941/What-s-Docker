@@ -28,7 +28,23 @@ fdisk -l
 ## UnionFS
 
 OverlayFS是一個面向Linux的檔案系統服務，其實現一個面向其他檔案系統的聯合掛載。
+
 可以想成是我們在操作git
+
+``` shell
+docker pull ubuntu
+
+Using default tag: latest
+latest: Pulling from library/ubuntu
+
+5ba4f30e5bea: Pull complete
+9d7d19c9dc56: Pull complete
+ac6ad7efd0f9: Pull complete
+e7491a747824: Pull complete
+a3ed95caeb02: Pull complete
+Digest: sha256:46fb5d001b88ad904c5c732b086b596b92cfb4a4840a3abd0e35dbb6870585e4
+Status: Downloaded newer image for ubuntu:latest
+```
 
 ## System D
 systemd is a software suite that provides an array of system components for Linux operating systems.
