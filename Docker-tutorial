@@ -1,1 +1,4 @@
-
+``` shell
+$
+docker info;
+```
